@@ -27,4 +27,17 @@ wget https://download.jetbrains.com/toolbox/jetbrains-toolbox-2.3.2.31487.tar.gz
 sudo tar -xzf jetbrains-toolbox-2.3.2.31487.tar.gz -C /opt
 ./opt/jetbrains-toolbox-2.3.2.31487/jetbrains-toolbox
 
+pacman -S zsh
+chsh -s $(which zsh)
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# clone
+git clone https://github.com/powerline/fonts.git --depth=1
+# install
+cd fonts
+./install.sh
+# clean-up a bit
+cd ..
+rm -rf fonts
+
 reboot
